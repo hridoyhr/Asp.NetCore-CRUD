@@ -1,0 +1,32 @@
+﻿@model StudentModel
+
+@{
+    ViewBag.Title = "Insert Page";
+}
+
+<div class="container bg-dark py-4" asp-action="Insert">
+    <h1 class="text-white text-center">Student Information</h1>
+    <div class="form-group">
+        <label asp-for="Name" for="name" class="text-white">Name</label>
+        <input asp-for="Name" class="form-control" type="text" id="name" placeholder="Enter name">
+    </div>
+
+    <div class="form-group">
+        <label asp-for="Email" for="email" class="text-white">Email Address</label>
+        <input asp-for="Email" class="form-control form-control-lg" type="text" id="email" placeholder="Enter Email Address">
+    </div>
+
+    <div class="form-group">
+        <label asp-for="Phone" for="company" class="text-white">Phone</label>
+        <input asp-for="Phone" type="text" class="form-control" id="company" placeholder="Enter Phone Number">
+    </div>
+
+    <div class="form-group">
+        <label asp-for="Address" for="text" class="text-white">Address</label>
+        <input asp-for="Address" type="text" class="form-control" id="company" placeholder="Enter Your Address">
+    </div>
+
+    <input type="submit" name="Submit" class="btn btn-danger btn-lg" />
+</div>
+
+

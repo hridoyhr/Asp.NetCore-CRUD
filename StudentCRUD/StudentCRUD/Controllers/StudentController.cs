@@ -23,7 +23,7 @@ namespace StudentCRUD.Controllers
             return View(await _context.studentModels.ToListAsync());
         }
 
-        public async Task<IActionResult> AddOrEdit(int id = 0)
+        public IActionResult AddOrEdit(int id = 0)
         {
             if (id == 0)
                 return View(new StudentModel());
