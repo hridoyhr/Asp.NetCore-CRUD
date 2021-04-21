@@ -20,6 +20,10 @@ namespace StudentCRUD.Models
         [DisplayName("Email Address")]
         public string EmailAddress { get; set; }
 
+        [Required(ErrorMessage ="Enter your Department")]
+        [DisplayName("Department")]
+        public string Department { get; set; }
+
         [Required(ErrorMessage = "Enter Your Phone")]
         [DisplayName("Phone Number")]
         public string Mobile { get; set; }
