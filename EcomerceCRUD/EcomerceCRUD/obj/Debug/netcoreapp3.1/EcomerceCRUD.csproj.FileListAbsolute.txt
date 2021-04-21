@@ -141,3 +141,4 @@ E:\All C# File\Asp.net core Practice\CRUD-Operation\Asp.NetCore-CRUD\EcomerceCRU
 E:\All C# File\Asp.net core Practice\CRUD-Operation\Asp.NetCore-CRUD\EcomerceCRUD\EcomerceCRUD\bin\Debug\netcoreapp3.1\zh-Hant\Microsoft.CodeAnalysis.Workspaces.resources.dll
 E:\All C# File\Asp.net core Practice\CRUD-Operation\Asp.NetCore-CRUD\EcomerceCRUD\EcomerceCRUD\obj\Debug\netcoreapp3.1\Razor\Views\EComerce\Index.cshtml.g.cs
 E:\All C# File\Asp.net core Practice\CRUD-Operation\Asp.NetCore-CRUD\EcomerceCRUD\EcomerceCRUD\obj\Debug\netcoreapp3.1\Razor\Views\EComerce\AddOrEdit.cshtml.g.cs
+E:\All C# File\Asp.net core Practice\CRUD-Operation\Asp.NetCore-CRUD\EcomerceCRUD\EcomerceCRUD\obj\Debug\netcoreapp3.1\Razor\Views\Shared\_show.cshtml.g.cs

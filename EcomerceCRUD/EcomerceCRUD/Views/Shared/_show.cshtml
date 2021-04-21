@@ -1,0 +1,21 @@
+﻿@model EComerceModel
+<td>
+    <label>@Model.ProductId</label>
+</td>
+<td>
+    <label>@Model.ProductName</label>
+</td>
+<td>
+    <label>@Model.Quantity</label>
+</td>
+<td>
+    <label>@Model.Price</label>
+</td>
+<td>
+    <label>@Model.Company</label>
+</td>
+<td>
+    <a asp-action="AddOrEdit" asp-route-id="ProductId"><i class="fa fa-marker fa-lg"></i></a>
+    <a asp-action="Delete" asp-route-id="ProductId" class="text-danger ml-1" 
+       onclick="return confirm('Are you sure to delete this record?')"><i class="fa fa-trash-alt fa-lg"></i></a>
+</td>

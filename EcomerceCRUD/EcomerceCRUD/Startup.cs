@@ -29,6 +29,7 @@ namespace EcomerceCRUD
 
             services.AddDbContext<EComerceContext>(options =>
             options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
+
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -46,6 +47,8 @@ namespace EcomerceCRUD
             }
             app.UseHttpsRedirection();
             app.UseStaticFiles();
+
+
 
             app.UseRouting();
 
