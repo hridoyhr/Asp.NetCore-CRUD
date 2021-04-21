@@ -17,12 +17,13 @@ namespace StudentCRUD.Controllers
             _context = context;
         }
 
-
+        [HttpGet]
         public async Task<IActionResult> Index()
         {
             return View(await _context.studentModels.ToListAsync());
         }
 
+        [HttpGet]
         public IActionResult AddOrEdit(int id = 0)
         {
             if (id == 0)
@@ -35,6 +36,7 @@ namespace StudentCRUD.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> AddOrEdit(StudentModel model)
         {
+            
             if(ModelState.IsValid)
             {
                 if (model.Id == 0)
@@ -48,6 +50,7 @@ namespace StudentCRUD.Controllers
             return View(model);
         }
 
+        [HttpGet]
         public async Task<IActionResult> Delete(int ? id)
         {
             var student = await _context.studentModels.FindAsync(id);
