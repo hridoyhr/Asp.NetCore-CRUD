@@ -19,16 +19,22 @@ namespace EcomerceCRUD.Controllers
 
         public async Task<IActionResult> Index()
         {
-            return View(await _context.eComerces.ToListAsync());
+            var model = new EComerceModel(_context);
+            var data = model.ListOfData();
+            return View(data);
         }
 
         [HttpGet]
         public IActionResult AddOrEdit(int id =0)
         {
+            var model = new EComerceModel(_context);
             if (id == 0)
-                return View(new EComerceModel());
+                return View(model);
             else
-                return View(_context.eComerces.Find(id));
+            {
+                var existingData = model.FindData(id);
+                return View(existingData);
+            }
         }
 
         [HttpPost]
@@ -38,23 +44,24 @@ namespace EcomerceCRUD.Controllers
             if (ModelState.IsValid)
             {
                 if (model.ProductId == 0)
-                    _context.Add(model);
+                    model.Add(model);
                 else
-                    _context.Update(model);
+                    model.update(model);
 
-                await _context.SaveChangesAsync();
+                await model.save();
                 return RedirectToAction(nameof(Index));
             }
             return View(model);
         }
 
         [HttpGet]
-        public async Task<IActionResult> Delete(int ? id)
+        public async Task<IActionResult> Delete(int? id)
         {
-            var ecommerce = await _context.eComerces.FindAsync(id);
+            var model = new EComerceModel(_context);
+            var ecommerce = model.FindData(id.GetValueOrDefault());
             _context.eComerces.Remove(ecommerce);
 
-            await _context.SaveChangesAsync();
+            await model.save();
             return RedirectToAction(nameof(Index));
         }
     }
